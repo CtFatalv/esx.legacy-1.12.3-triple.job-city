@@ -1,7 +1,7 @@
 Config = {}
 
 -- for ox inventory, use Config.CustomInventory = "ox", for others, set to "resource_name"
-Config.CustomInventory = true
+Config.CustomInventory = "ox"
 
 Config.Accounts = {
     bank = {
@@ -38,8 +38,9 @@ Config.AdminGroups = {
 Config.EnablePaycheck = true -- enable paycheck
 Config.LogPaycheck = false -- Logs paychecks to a nominated Discord channel via webhook (default is false)
 Config.EnableSocietyPayouts = true -- pay from the society account that the player is employed at? Requirement: esx_society
-Config.MaxWeight = 30 -- the max inventory weight without a backpack
+Config.MaxWeight = 24 -- the max inventory weight without a backpack
 Config.PaycheckInterval = 7 * 60000 -- how often to receive paychecks in milliseconds
+Config.SaveDeathStatus = true -- Save the death status of a player
 Config.EnableDebug = false -- Use Debug options?
 
 Config.DefaultJobDuty = false -- A players default duty status when changing jobs
@@ -54,9 +55,6 @@ Config.AdminLogging = false -- Logs the usage of certain commands by those with 
 -- DO NOT CHANGE BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING
 --------------------------------------------------------------------
 Config.EnableDefaultInventory = Config.CustomInventory == false -- Display the default Inventory ( F2 )
-if GetResourceState("ox_inventory") ~= "missing" then
-    Config.CustomInventory = "ox"
-end
 
 local txAdminLocale = GetConvar("txAdmin-locale", "en")
 local esxLocale = GetConvar("esx:locale", "invalid")

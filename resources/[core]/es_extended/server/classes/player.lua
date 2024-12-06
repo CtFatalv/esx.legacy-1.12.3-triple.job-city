@@ -5,8 +5,8 @@
 ---@field identifier string
 ---@field inventory table
 ---@field job table
----@param job2 table
----@param job3 table
+---@field job2 table
+---@field job3 table
 ---@field loadout table
 ---@field name string
 ---@field playerId number
@@ -651,26 +651,6 @@ function CreateExtendedPlayer(playerId, identifier, group, accounts, inventory, 
         TriggerEvent("esx:setJob3", self.source, self.job3, lastJob3)
         self.triggerEvent("esx:setJob3", self.job3, lastJob3)
         Player(self.source).state:set("job3", self.job3, true)
-    end
-
-    ---@param weaponName string
-    ---@param ammo number
-    ---@return nil
-    function self.addWeapon(weaponName, ammo)
-        if not self.hasWeapon(weaponName) then
-            local weaponLabel <const> = ESX.GetWeaponLabel(weaponName)
-
-            table.insert(self.loadout, {
-                name = weaponName,
-                ammo = ammo,
-                label = weaponLabel,
-                components = {},
-                tintIndex = 0,
-            })
-
-            GiveWeaponToPed(GetPlayerPed(self.source), joaat(weaponName), ammo, false, false)
-            self.triggerEvent("esx:addInventoryItem", weaponLabel, false, true)
-        end
     end
 
     ---@param weaponName string

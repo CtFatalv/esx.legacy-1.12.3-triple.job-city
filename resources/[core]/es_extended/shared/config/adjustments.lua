@@ -42,7 +42,7 @@ Config.RemoveHudComponents = {
 --^A will lead to a literal A being emitted.
 --Any other character will lead to said character being emitted.
 -- A string shorter than 8 characters will be padded on the right.
---Config.CustomAIPlates = "........" -- Custom plates for AI vehicles
+Config.CustomAIPlates = "........" -- Custom plates for AI vehicles
 
 --[[
     PlaceHolders:
