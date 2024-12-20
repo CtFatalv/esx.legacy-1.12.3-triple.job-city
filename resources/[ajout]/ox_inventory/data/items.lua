@@ -537,7 +537,7 @@ return {
 	},
 
 	['m_lithium'] = {
-		label = 'Minerai de Lithium',
+		label = 'Minerai de lithium',
 		weight = 450,
 		stack = true,
 		close = false,
@@ -582,6 +582,13 @@ return {
 
 	['lingotfer'] = {
 		label = 'Lingot en fer',
+		weight = 450,
+		stack = true,
+		close = false,
+	},
+
+	['lingotacier'] = {
+		label = 'Lingot en acier',
 		weight = 450,
 		stack = true,
 		close = false,

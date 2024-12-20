@@ -600,7 +600,7 @@ function OpenMenu(isPedMenu, menuType, menuData)
         for i = 0, #outfitMenuItems, 1 do
             menuItems[#menuItems + 1] = outfitMenuItems[i]
         end
-    elseif menuType == "job-outfit" then
+	elseif menuType == "job-outfit" then
         mainMenu.title = _L("clothing.outfits.title")
         local workOutfitsMenuID = "illenium_appearance_work_outfits_menu"
         RegisterWorkOutfitsListMenu(workOutfitsMenuID, mainMenuID, menuData)

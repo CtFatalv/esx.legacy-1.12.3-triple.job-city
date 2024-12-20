@@ -302,38 +302,6 @@ RegisterNetEvent("illenium-appearance:server:ResetRoutingBucket", function()
 end)
 
 if Config.EnablePedMenu then
-    lib.addCommand("pedmenu", {
-        help = _L("commands.pedmenu.title"),
-        params = {
-            {
-                name = "playerID",
-                type = "number",
-                help = "Target player's server id",
-                optional = true
-            },
-        },
-        restricted = Config.PedMenuGroup
-    }, function(source, args)
-        local target = source
-        if args.playerID then
-            local citizenID = Framework.GetPlayerID(args.playerID)
-            if citizenID then
-                target = args.playerID
-            else
-                lib.notify(source, {
-                    title = _L("commands.pedmenu.failure.title"),
-                    description = _L("commands.pedmenu.failure.description"),
-                    type = "error",
-                    position = Config.NotifyOptions.position
-                })
-                return
-            end
-        end
-        TriggerClientEvent("illenium-appearance:client:openClothingShopMenu", target, true)
-    end)
-end
-
-if Config.EnablePedMenu then
     lib.addCommand("pedmenuskin", {
         help = ("Changer la tête d'une personne"),
         params = {
@@ -362,6 +330,35 @@ if Config.EnablePedMenu then
             end
         end
         TriggerClientEvent("illenium-appearance:client:OpenSurgeonShop", target, true)
+    end)
+    lib.addCommand("pedmenu", {
+        help = _L("commands.pedmenu.title"),
+        params = {
+            {
+                name = "playerID",
+                type = "number",
+                help = "Target player's server id",
+                optional = true
+            },
+        },
+        restricted = Config.PedMenuGroup
+    }, function(source, args)
+        local target = source
+        if args.playerID then
+            local citizenID = Framework.GetPlayerID(args.playerID)
+            if citizenID then
+                target = args.playerID
+            else
+                lib.notify(source, {
+                    title = _L("commands.pedmenu.failure.title"),
+                    description = _L("commands.pedmenu.failure.description"),
+                    type = "error",
+                    position = Config.NotifyOptions.position
+                })
+                return
+            end
+        end
+        TriggerClientEvent("illenium-appearance:client:openClothingShopMenu", target, true)
     end)
 end
 

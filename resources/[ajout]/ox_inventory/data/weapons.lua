@@ -1,11 +1,5 @@
 return {
 	Weapons = {
-		['weapon_stungun_mp'] = {
-			label = 'Battle Rifle',
-			weight = 3300,
-			durability = 0.03,
-			ammoname = 'ammo-rifle2',
-		},
 		['WEAPON_BATTLERIFLE'] = {
 			label = 'Battle Rifle',
 			weight = 3300,
