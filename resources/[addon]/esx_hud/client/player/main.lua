@@ -146,7 +146,8 @@ AddEventHandler("esx:pauseMenuActive", function(state)
 end)
 
 -- job handler
-ESX.SecureNetEvent("esx:setJob", function(job)
+RegisterNetEvent("esx:setJob")
+AddEventHandler("esx:setJob", function(job)
     ESX.PlayerData.job = job
 end)
 
