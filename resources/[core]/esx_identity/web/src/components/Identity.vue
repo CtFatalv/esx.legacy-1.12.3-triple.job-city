@@ -33,55 +33,55 @@ const schema = yup.object({
 <template>
     <div class="dialog">
         <div class="dialog__header">
-            <h1>FORMULAIRE<span> D'IDENTIFICATION</span></h1>
+            <h1>CHARACTER <span>IDENTITY</span></h1>
         </div>
         <div class="dialog__body">
-            <p class="dialog__body-hint">Commencez par créer votre identité</p>
+            <p class="dialog__body-hint">Start by creating your identity</p>
             <Form class="dialog__body-form" id="register" action="#" novalidate @submit="onSubmit" :validation-schema="schema">
                 <div class="dialog__form-group">
-                    <label for="firstname">Nom</label>
+                    <label for="firstname">Firstname</label>
                     <div class="dialog__form-validation">
                         <Field id="firstname" type="text" name="firstname" placeholder="Firstname" validateOnInput />
                     </div>
                     <ErrorMessage name="firstname" class="dialog__form-message dialog__form-message--error" />
                 </div>
                 <div class="dialog__form-group">
-                    <label for="lastname">Prénom</label>
+                    <label for="lastname">Lastname</label>
                     <div class="dialog__form-validation">
                         <Field id="lastname" type="text" name="lastname" placeholder="Lastname" validateOnInput />
                     </div>
                     <ErrorMessage name="lastname" class="dialog__form-message dialog__form-message--error" />
                 </div>
                 <div class="dialog__form-group">
-                    <label for="dob">Date de Naissance</label>
+                    <label for="dob">Date of birth</label>
                     <Field id="dob" type="date" name="dob" placeholder="dd/mm/yyyy" validateOnInput />
                     <ErrorMessage name="dob" class="dialog__form-message dialog__form-message--error" />
                 </div>
                 <div class="dialog__form-group">
-                    <label for="gender">Genre</label>
+                    <label for="gender">Gender</label>
                     <div class="dialog__form-group dialog__form-group--radio">
                         <div class="dialog__form-radio">
                             <Field type="radio" id="male" value="m" name="gender" validateOnInput />
                             <label for="male">
-                                <i class="fas fa-mars"></i>Homme
+                                <i class="fas fa-mars"></i>Male
                             </label>
                         </div>
                         <div class="dialog__form-radio">
                             <Field type="radio" id="female" value="f" name="gender" validateOnInput />
                             <label for="female">
-                                <i class="fas fa-venus"></i>Femme
+                                <i class="fas fa-venus"></i>Female
                             </label>
                         </div>
                     </div>
                     <ErrorMessage name="gender" class="dialog__form-message dialog__form-message--error" />
                 </div>
                 <div class="dialog__form-group">
-                    <label for="height">Taille</label>
+                    <label for="height">Height</label>
                     <Field id="height" type="text" name="height" placeholder="175" validateOnInput/>
                     <ErrorMessage name="height" class="dialog__form-message dialog__form-message--error" />
                 </div>
                 <button class="dialog__form-submit" id="submit" type="submit">
-                    <i class="fas fa-user-plus"></i>VALIDER
+                    <i class="fas fa-user-plus"></i>CREATE
                 </button>
             </Form>
         </div>

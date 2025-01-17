@@ -1,4 +1,269 @@
 return {
+    
+    ['w_demicubeacier'] = {
+        label = 'Demi-cube d\'acier',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_cubeacier'] = {
+        label = 'Cube d\'acier',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_manche'] = {
+        label = 'Manche en bois',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_lame'] = {
+        label = 'Lame',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_verre'] = {
+        label = 'Verre',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_ampoule'] = {
+        label = 'Ampoule',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_pile'] = {
+        label = 'Pile',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_plastique'] = {
+        label = 'Plastique',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_boutdeverre'] = {
+        label = 'Bout de verre',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_culasse'] = {
+        label = 'Culasse',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_canon'] = {
+        label = 'Canon',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_poignee'] = {
+        label = 'Poignée',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_poignee_ergo'] = {
+        label = 'Poignée ergonomique',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_barillet'] = {
+        label = 'Barillet',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_batterie'] = {
+        label = 'Batterie',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_culasse_compact'] = {
+        label = 'Culasse compact',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_canon_court'] = {
+        label = 'Canon Court',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_canon_renforcer'] = {
+        label = 'Canon renforcé',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_canon_renforcer_mk'] = {
+        label = 'Canon renforcé MK',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_culasse_renforcer'] = {
+        label = 'Culasse renforcé',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_poignee_renforcer'] = {
+        label = 'Poignée renforcé',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_culasse_tactique'] = {
+        label = 'Culasse tactique',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_canon_tactique'] = {
+        label = 'Canon tactique',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_canon_tactique_mk'] = {
+        label = 'Canon tactique MK',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_poignee_tactique'] = {
+        label = 'Poignée tactique',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_lunette_tactique'] = {
+        label = 'Lunette tactique',
+        weight = 100,
+        stack = true,
+    },
+
+    ['w_lanceur_rpg'] = {
+        label = 'Lanceur RPG',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_lanceur_grenade'] = {
+        label = 'Lanceur de grenade',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_culasse_rotative'] = {
+        label = 'Culasse rotative',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_canon_multitubes'] = {
+        label = 'Canon multitubes',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_canon_electromagnetique'] = {
+        label = 'Canon électromagnétique',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_lanceur_guide'] = {
+        label = 'Lanceur guidé',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_culasse_emp'] = {
+        label = 'Culasse EMP',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_canon_emp'] = {
+        label = 'Canon EMP',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_batterie_iem'] = {
+        label = 'Batterie IEM',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_corps_grenade'] = {
+        label = 'Corps de grenade',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_detonateur'] = {
+        label = 'Mécanisme de détonation',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_goupille'] = {
+        label = 'Goupille',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_chiffon'] = {
+        label = 'Chiffon',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_charge_collante'] = {
+        label = 'Charge collante',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_capteur_proximite'] = {
+        label = 'Capteur de proximité',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_boule_de_glace'] = {
+        label = 'Boule de glace',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_tube_titane'] = {
+        label = 'Tube en Titane',
+        weight = 100,
+        stack = true,
+    },
+    
+    ['w_boule_de_peau'] = {
+        label = 'Boule de peau',
+        weight = 100,
+        stack = true,
+    },
+
 	['carkeys'] = {
 		label = 'Clé de voiture',
 		weight = 5,

@@ -46,6 +46,7 @@ local function LoadSkin(skin, cb)
 end
 
 RegisterNetEvent("skinchanger:loadSkin", function(skin, cb)
+	--print("1er skin chargé")
     LoadSkin(skin, cb)
 end)
 
@@ -62,7 +63,10 @@ RegisterNetEvent("skinchanger:loadClothes", function(_, clothes)
 end)
 
 RegisterNetEvent("esx_skin:openSaveableMenu", function(onSubmit, onCancel)
-    InitializeCharacter(Framework.GetGender(true), onSubmit, onCancel)
+	--print("Chargement du skin")
+	InitializeCharacter(Framework.GetGender(true), onSubmit, onCancel)
+	Wait(500)
+	InitializeCharacter(Framework.GetGender(true), onSubmit, onCancel)
 end)
 
 local function exportHandler(exportName, func)

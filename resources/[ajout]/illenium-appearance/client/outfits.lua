@@ -123,6 +123,7 @@ function LoadJobOutfit(oData)
 
     if Config.PersistUniforms and length > 1 then
         local appearance = client.getPedAppearance(cache.ped)
+        
         TriggerServerEvent("illenium-appearance:server:saveAppearance", appearance)
     end
 end

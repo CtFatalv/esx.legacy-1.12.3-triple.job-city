@@ -114,9 +114,11 @@ Locales["en"] = {
     ["commanderror_invalidcommand"] = "Commande invalide - /%s",
     ["commanderror_invalidplayerid"] = "Le joueur spécifié n'est pas connecté",
     ["commandgeneric_playerid"] = "Identifiant serveur du joueur",
+    ["commandgeneric_dimension"] = "Dimension de la cible",
     ["command_giveammo_noweapon_found"] = "%s n'a pas cette arme",
     ["command_giveammo_weapon"] = "Nom de l'arme",
     ["command_giveammo_ammo"] = "Quantité de munitions",
+    ["command_setdim"] = "Définir la dimension d'un joueur",
     ["tpm_nowaypoint"] = "Aucun point n'est défini sur la carte",
     ["tpm_success"] = "Vous avez bien été téléporté",
 
@@ -183,7 +185,7 @@ Locales["en"] = {
     ["weapon_sawnoffshotgun"] = "Fusil à canon scié",
 
     -- SMG & LMG
-    ["weapon_assaultsmg"] = "SMG s'assaut",
+    ["weapon_assaultsmg"] = "SMG d'assaut",
     ["weapon_combatmg"] = "MG de combat",
     ["weapon_combatmg_mk2"] = "MG de combat MK2",
     ["weapon_combatpdw"] = "PDW de combat",
@@ -195,6 +197,7 @@ Locales["en"] = {
     ["weapon_smg"] = "SMG",
     ["weapon_smg_mk2"] = "SMG MK2",
     ["weapon_raycarbine"] = "Carabine à rayons",
+    ["weapon_tecpistol"] = "Tactical SMG",
 
     -- Rifles
     ["weapon_advancedrifle"] = "Fusil avancé",
@@ -209,6 +212,7 @@ Locales["en"] = {
     ["weapon_specialcarbine"] = "Carabine spéciale",
     ["weapon_specialcarbine_mk2"] = "Carabine spéciale MK2",
     ["weapon_heavyrifle"] = "Fusil lourd",
+    ["weapon_battlerifle"] = "Battle Rifle",
 
     -- Sniper
     ["weapon_heavysniper"] = "Sniper lourd",
@@ -237,6 +241,13 @@ Locales["en"] = {
     ["weapon_acidpackage"] = "Paquet d'acide",
     ["weapon_pistolxm3"] = "Pistolet 8 x3m",
     ["weapon_railgunxm3"] = "Fusil électro-magnétique",
+
+    -- Chop Shop DLC
+    ["weapon_snowlauncher"] = "Lanceur de boule de neige",
+    ["weapon_hackingdevice"] = "Dispositif de piratage",
+
+    -- Bottom Dollar Bounties DLC
+    ["weapon_stunrod"] = "Baton électrique",
 
     -- Thrown
     ["weapon_ball"] = "Base-ball",
@@ -378,4 +389,37 @@ Locales["en"] = {
     ["tint_lspd"] = "skin bleu",
     ["tint_orange"] = "skin orange",
     ["tint_platinum"] = "skin platine",
+    -- MK2 Weapon Tints
+    ["tint_classic_black"] = "noir classique",
+    ["tint_classic_gray"] = "gris classique",
+    ["tint_classic_two_tone"] = "deux tons classiques",
+    ["tint_classic_white"] = "blanc classique",
+    ["tint_classic_beige"] = "beige classique",
+    ["tint_classic_green"] = "vert classique",
+    ["tint_classic_blue"] = "bleu classique",
+    ["tint_classic_earth"] = "terre classique",
+    ["tint_classic_brown_black"] = "marron noir classique",
+    ["tint_contrast_red"] = "rouge contrasté",
+    ["tint_contrast_blue"] = "bleu contrasté",
+    ["tint_contrast_yellow"] = "jaune contrasté",
+    ["tint_contrast_orange"] = "orange contrasté",
+    ["tint_bold_pink"] = "rose audacieux",
+    ["tint_bold_purple_yellow"] = "violet jaune audacieux",
+    ["tint_bold_orange"] = "orange audacieux",
+    ["tint_bold_green_purple"] = "vert violet audacieux",
+    ["tint_bold_red_feat"] = "rouge audacieux feat",
+    ["tint_bold_green_feat"] = "vert audacieux feat",
+    ["tint_bold_cyan_feat"] = "cyan audacieux feat",
+    ["tint_bold_yellow_feat"] = "jaune audacieux feat",
+    ["tint_bold_red_white"] = "rouge blanc audacieux",
+    ["tint_bold_blue_white"] = "bleu blanc audacieux",
+    ["tint_metallic_gold"] = "or métallique",
+    ["tint_metallic_platinum"] = "platine métallique",
+    ["tint_metallic_gray_lilac"] = "gris lilas métallique",
+    ["tint_metallic_purple_lime"] = "violet lime métallique",
+    ["tint_metallic_red"] = "rouge métallique",
+    ["tint_metallic_green"] = "vert métallique",
+    ["tint_metallic_blue"] = "bleu métallique",
+    ["tint_metallic_white_aqua"] = "blanc aqua métallique",
+    ["tint_metallic_red_yellow"] = "rouge jaune métallique",
 }

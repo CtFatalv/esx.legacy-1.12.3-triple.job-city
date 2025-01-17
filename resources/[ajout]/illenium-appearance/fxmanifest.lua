@@ -72,6 +72,7 @@ shared_scripts {
   "shared/framework/framework.lua",
   "shared/framework/esx/util.lua",
   "locales/locales.lua",
+  "locales/en.lua",
   "locales/fr.lua",
   "@ox_lib/init.lua"
 }

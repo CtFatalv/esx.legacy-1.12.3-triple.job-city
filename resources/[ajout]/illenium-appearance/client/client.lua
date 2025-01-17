@@ -620,6 +620,7 @@ function OpenMenu(isPedMenu, menuType, menuData)
             menu = changeOutfitMenuID
         }
     end
+    print("0")
     mainMenu.options = menuItems
 
     lib.registerContext(mainMenu)

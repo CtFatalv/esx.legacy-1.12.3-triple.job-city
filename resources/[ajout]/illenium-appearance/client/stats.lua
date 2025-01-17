@@ -15,7 +15,7 @@ end
 function RestorePlayerStats()
     if stats then
         SetEntityMaxHealth(cache.ped, 200)
-        Wait(1000) -- Safety Delay
+        Wait(2000) -- Safety Delay
         SetEntityHealth(cache.ped, stats.health)
         SetPedArmour(cache.ped, stats.armour)
         ResetRechargeMultipliers()

@@ -284,15 +284,15 @@ end
 
 ESX.GetPlayers = GetPlayers
 
-local function checkTable(key, val, player, xPlayers)
+local function checkTable(key, val, xPlayer, xPlayers)
     for valIndex = 1, #val do
         local value = val[valIndex]
         if not xPlayers[value] then
             xPlayers[value] = {}
         end
 
-        if (key == "job" and player.job.name == value) or player[key] == value then
-            xPlayers[value][#xPlayers[value] + 1] = player
+        if (key == "job" and xPlayer.job.name == value) or xPlayer[key] == value then
+            xPlayers[value][#xPlayers[value] + 1] = xPlayer
         end
 
         if (key == "job2" and player.job2.name == value) or player[key] == value then
@@ -309,26 +309,28 @@ end
 ---@param val? string|table
 ---@return table
 function ESX.GetExtendedPlayers(key, val)
+    if not key then
+        return ESX.Table.ToArray(ESX.Players)
+    end
+
     local xPlayers = {}
     if type(val) == "table" then
-        for _, v in pairs(ESX.Players) do
-            checkTable(key, val, v, xPlayers)
+        for _, xPlayer in pairs(ESX.Players) do
+            checkTable(key, val, xPlayer, xPlayers)
         end
-    else
-        for _, v in pairs(ESX.Players) do
-            if key then
-                if (key == "job" and v.job.name == val) or v[key] == val then
-                    xPlayers[#xPlayers + 1] = v
-                end
-                if (key == "job2" and v.job2.name == val) or v[key] == val then
-                    xPlayers[#xPlayers + 1] = v
-                end
-                if (key == "job3" and v.job3.name == val) or v[key] == val then
-                    xPlayers[#xPlayers + 1] = v
-                end
-            else
-                xPlayers[#xPlayers + 1] = v
-            end
+
+        return xPlayers
+    end
+
+    for _, xPlayer in pairs(ESX.Players) do
+        if (key == "job" and xPlayer.job.name == val) or xPlayer[key] == val then
+            xPlayers[#xPlayers + 1] = xPlayer
+        end
+        if (key == "job2" and v.job2.name == val) or v[key] == val then
+            xPlayers[#xPlayers + 1] = v
+        end
+        if (key == "job3" and v.job3.name == val) or v[key] == val then
+            xPlayers[#xPlayers + 1] = v
         end
     end
 
@@ -347,7 +349,7 @@ function ESX.GetNumPlayers(key, val)
         local numPlayers = {}
         if key == "job" then
             for _, v in ipairs(val) do
-                numPlayers[v] = (ESX.JobsPlayerCount[v] or 0)
+                numPlayers[v] = (Core.JobsPlayerCount[v] or 0)
             end
             return numPlayers
         end
@@ -374,7 +376,7 @@ function ESX.GetNumPlayers(key, val)
     end
 
     if key == "job" then
-        return (ESX.JobsPlayerCount[val] or 0)
+        return (Core.JobsPlayerCount[val] or 0)
     end
 
     if key == "job2" then
@@ -601,6 +603,11 @@ end
 ---@return table
 function ESX.GetJobs()
     return ESX.Jobs
+end
+
+---@return table
+function ESX.GetItems()
+    return ESX.Items
 end
 
 ---@return table

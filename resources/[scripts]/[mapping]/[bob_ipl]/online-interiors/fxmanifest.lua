@@ -53,8 +53,8 @@ client_scripts({
 	"client/maps/drug_wars/*.lua", -- DLC Los Santos Drug Wars (Requires forced gamebuild 2802 or higher)
 	"client/maps/mercenary/*.lua", -- DLC San Andreas Mercenaries  (Requires forced gamebuild 2944 or higher)
 	"client/maps/the_chop_shop/*.lua", -- DLC The Chop Shop  (Requires forced gamebuild 3095 or higher)
-        ]]
 	"client/maps/arcade/*.lua", -- DLC Casino Heist (Requires forced gamebuild 2189 or higher)
+        ]]
 })
 
 data_file("DLC_ITYP_REQUEST")("stream/hollywood_metadata_012_strm.ytyp")

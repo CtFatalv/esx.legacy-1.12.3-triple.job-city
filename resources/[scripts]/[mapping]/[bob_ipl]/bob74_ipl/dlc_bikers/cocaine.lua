@@ -35,6 +35,7 @@ BikerCocaine = {
             --"table_equipment_upgrade"
         },
 
+
         Set = function(style, refresh)
             BikerCocaine.Style.Clear(false)
 
