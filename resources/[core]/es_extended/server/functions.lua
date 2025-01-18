@@ -295,12 +295,12 @@ local function checkTable(key, val, xPlayer, xPlayers)
             xPlayers[value][#xPlayers[value] + 1] = xPlayer
         end
 
-        if (key == "job2" and player.job2.name == value) or player[key] == value then
-            xPlayers[value][#xPlayers[value] + 1] = player
+        if (key == "job2" and xPlayer.job2.name == value) or xPlayer[key] == value then
+            xPlayers[value][#xPlayers[value] + 1] = xPlayer
         end
 
-        if (key == "job3" and player.job3.name == value) or player[key] == value then
-            xPlayers[value][#xPlayers[value] + 1] = player
+        if (key == "job3" and xPlayer.job3.name == value) or xPlayer[key] == value then
+            xPlayers[value][#xPlayers[value] + 1] = xPlayer
         end
     end
 end
@@ -326,11 +326,11 @@ function ESX.GetExtendedPlayers(key, val)
         if (key == "job" and xPlayer.job.name == val) or xPlayer[key] == val then
             xPlayers[#xPlayers + 1] = xPlayer
         end
-        if (key == "job2" and v.job2.name == val) or v[key] == val then
-            xPlayers[#xPlayers + 1] = v
+        if (key == "job2" and xPlayer.job2.name == val) or xPlayer[key] == val then
+            xPlayers[#xPlayers + 1] = xPlayer
         end
-        if (key == "job3" and v.job3.name == val) or v[key] == val then
-            xPlayers[#xPlayers + 1] = v
+        if (key == "job3" and xPlayer.job3.name == val) or xPlayer[key] == val then
+            xPlayers[#xPlayers + 1] = xPlayer
         end
     end
 
