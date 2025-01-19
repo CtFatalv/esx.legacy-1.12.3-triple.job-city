@@ -6,12 +6,20 @@ Config.Blacklist = {
             upperBody = {},
             lowerBody = {},
             bags = {},
-            shoes = {},
+            shoes = {
+                {
+                    drawables = {155}
+                }
+            },
             scarfAndChains = {},
             shirts = {},
             bodyArmor = {},
             decals = {},
-            jackets = {}
+            jackets = {
+                {
+                    drawables = {573}
+                }
+            }
         },
         props = {
             hats = {},
