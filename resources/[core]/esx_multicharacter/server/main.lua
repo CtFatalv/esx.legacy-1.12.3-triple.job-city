@@ -23,6 +23,8 @@ end)
 
 AddEventHandler("esx_identity:completedRegistration", function(source, data)
     Multicharacter:RegistrationComplete(source, data)
+	Wait(5000)
+	exports['um-idcard']:CreateMetaLicense(source, 'id_card')
 end)
 
 AddEventHandler("playerDropped", function()
