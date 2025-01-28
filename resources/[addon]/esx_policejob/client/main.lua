@@ -878,9 +878,17 @@ AddEventHandler('esx_policejob:policeaction', function()
 end)
 
 AddEventHandler('esx_policejob:vehicleinfo', function()
-	vehicle = ESX.Game.GetVehicleInDirection()
-    local vehicleData = ESX.Game.GetVehicleProperties(vehicle)
-    OpenVehicleInfosMenu(vehicleData)
+    local vehicle = ESX.Game.GetVehicleInDirection()
+    if vehicle and DoesEntityExist(vehicle) then
+        local vehicleData = ESX.Game.GetVehicleProperties(vehicle)
+    
+        vehicleData.plate = GetVehicleNumberPlateText(vehicle) or "Unknown"
+        
+        OpenVehicleInfosMenu(vehicleData)
+    else
+        local vehicleData = { plate = "Unknown" }
+        OpenVehicleInfosMenu(vehicleData)
+    end
 end)
 
 AddEventHandler('esx_policejob:vehicleinfoplate', function(elementF)
@@ -980,7 +988,6 @@ end)
 blipsPol = {}
 
 AddEventHandler('esx_police:appelrenfort', function(player)
-	print("player", json.encode(player))
     local playerPed = PlayerPedId()
     local coords = GetEntityCoords(playerPed)
     TriggerServerEvent('esx_police:send', coords, player)
@@ -988,10 +995,7 @@ end)
 
 RegisterNetEvent('esx_police:send')
 AddEventHandler('esx_police:send', function(coords, data)
-	print("player", json.encode(data))
-	print("player code", data.code)
 	local codepolice = data.code
-	print("codepolice", codepolice)
     local player = ESX.GetPlayerData()
     if HasGroups(Groups) then
     --if PlayerData.job ~= nil and PlayerData.job.name == 'police' then
@@ -1012,7 +1016,6 @@ AddEventHandler('esx_police:send', function(coords, data)
         table.insert(blipsPol, blipp)
         Wait(180000)
         for i in pairs(blipsPol) do
-			print("ici")
             RemoveBlip(blipsPol[i])
             blipsPol[i] = nil
         end
@@ -1027,7 +1030,6 @@ AddEventHandler('esx_police:send', function(coords, data)
         table.insert(blipsPol, blipp)
         Wait(180000)
         for i in pairs(blipsPol) do
-			print("ici")
             RemoveBlip(blipsPol[i])
             blipsPol[i] = nil
         end
@@ -1042,7 +1044,6 @@ AddEventHandler('esx_police:send', function(coords, data)
         table.insert(blipsPol, blipp)
         Wait(180000)
         for i in pairs(blipsPol) do
-			print("ici")
             RemoveBlip(blipsPol[i])
             blipsPol[i] = nil
         end
