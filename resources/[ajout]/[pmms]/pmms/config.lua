@@ -723,7 +723,7 @@ Config.dui.urls = {}
 -- 		Clone https://github.com/kibook/pmms-dui and install on your
 -- 		web server.
 --
-Config.dui.urls.https = "https://optimalrp.com/pmms-dui"
+Config.dui.urls.https = "https://kibook.github.io/pmms-dui"
 
 -- The URL of the DUI page used for HTTP links. If left unset, the internal DUI page is used.
 --Config.dui.urls.http = ""
