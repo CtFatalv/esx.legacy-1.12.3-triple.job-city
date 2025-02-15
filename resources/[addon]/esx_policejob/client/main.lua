@@ -879,15 +879,22 @@ end)
 
 AddEventHandler('esx_policejob:vehicleinfo', function()
     local vehicle = ESX.Game.GetVehicleInDirection()
+    
+    -- Check if a vehicle was found
     if vehicle and DoesEntityExist(vehicle) then
         local vehicleData = ESX.Game.GetVehicleProperties(vehicle)
-    
+        
+        -- Get the license plate of the targeted vehicle
         vehicleData.plate = GetVehicleNumberPlateText(vehicle) or "Unknown"
         
         OpenVehicleInfosMenu(vehicleData)
     else
+        -- If no vehicle is found, set vehicleData to "Unknown"
         local vehicleData = { plate = "Unknown" }
         OpenVehicleInfosMenu(vehicleData)
+
+        -- Optionally notify the player
+        -- ESX.ShowNotification("No vehicle detected nearby.")
     end
 end)
 
